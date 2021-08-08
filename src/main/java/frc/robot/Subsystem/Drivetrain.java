@@ -1,11 +1,7 @@
 package frc.robot.Subsystem;
 
-import edu.wpi.first.wpilibj.Compressor;
 import edu.wpi.first.wpilibj.DoubleSolenoid;
-import edu.wpi.first.wpilibj.Encoder;
 import edu.wpi.first.wpilibj.Victor;
-import edu.wpi.first.wpilibj.drive.DifferentialDrive;
-import edu.wpi.first.wpilibj.kinematics.DifferentialDriveOdometry;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
 import com.ctre.phoenix.motorcontrol.ControlMode;
@@ -20,14 +16,8 @@ public class Drivetrain extends SubsystemBase {
   private Victor VictorLF, VictorRF, VictorLB, VictorRB;
   private DoubleSolenoid Shifter;
   private PigeonIMU pigeon;
-  private double deg;
-  private Encoder RightEncoder;
-  private Encoder LeftEncoder;
-  private Value value;
+ 
 
-  private DifferentialDrive _drive;
-
-  private DifferentialDriveOdometry _odometry;
 
   public Drivetrain() {
     TalonL = new TalonSRX(6);
